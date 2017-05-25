@@ -1,0 +1,93 @@
+$main-text-color: blue;
+$secondary-text-color: green;
+$info-text-color: lightblue;
+$alert-text-color: yellow;
+$danger-text-color: red;
+$transition-base-time: 0.3s;
+$transition-faster-time: 0.1s;
+$transition-longer-time: 0.5s;
+$transition-longest-time: 1s;
+$base-font: 14px;
+$h1-size: calc($base-font * 2); // 13,5px
+$h2-size: calc($base-font * 1.8); // 13,5px
+$h3-size: calc($base-font * 1.5); // 13,5px
+$h4-size: calc($base-font * 1.3); // 13,5px
+$h5-size: $base-font; // 13,5px
+$h6-size: calc($base-font * 0.9); // 13,5px
+body {
+    color: $main-text-color;
+    font-size: $h5-size;
+}
+
+.navbar {
+	border: 1px solid;
+	.navbar-items{
+		color:red;
+		&.navbar-item-active{
+			font-weight: bold;
+		}
+	}
+}
+
+.form{
+	input {
+		color: $main-text-color;
+		&:disabled{	
+			color: $secondary-text-color;
+		}
+		&:focus{
+			box-shadow: 0 0 5px rgba(0,0,0,0.5);
+		}
+	}
+			
+}
+
+@mixin clearfix {
+	display: inline-block;
+	&:after {
+		content: '';
+		display: block;
+	}
+	* html & {
+		height: 1px;
+	}
+}
+
+.menu {
+	@include clearfix;
+}
+
+@mixin ellipsis ($width){
+	width: $width;
+	overflow: hidden;
+}
+.panel-text {
+	@include ellipsis(250px);
+}
+
+@mixin apply-to-ie-only {
+	@content;
+}
+
+@include apply-to-ie-only{
+	#logo {
+		background-image: url(logo.gif);
+	}
+}
+
+// @mixin buttons {
+// 	border-radius: 5px;
+// 	color: $main-text-colors;
+// }
+// @include buttons {
+// 	&.btn-secondary {
+// 		color: $secondary-text-color;
+	
+// 		&:hover {
+// 			transform: scale(1.1);
+// 		}
+// 	}
+// }
+
+
+@import "_example.scss";

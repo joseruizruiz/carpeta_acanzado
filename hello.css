@@ -1,0 +1,35 @@
+body {
+  color: blue;
+  font-size: 14px; }
+
+.navbar {
+  border: 1px solid; }
+  .navbar .navbar-items {
+    color: red; }
+    .navbar .navbar-items.navbar-item-active {
+      font-weight: bold; }
+
+.form input {
+  color: blue; }
+  .form input:disabled {
+    color: green; }
+  .form input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.menu {
+  display: inline-block; }
+  .menu:after {
+    content: '';
+    display: block; }
+  * html .menu {
+    height: 1px; }
+
+.panel-text {
+  width: 250px;
+  overflow: hidden; }
+
+#logo {
+  background-image: url(logo.gif); }
+
+.red-color {
+  color: red; }

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+    <script>
+
+        var worker= new Worker("worker.js");
+
+        worker.onmessage= function (event){
+            console.log(event);
+        };
+        //  worker.terminate();
+        //  worker=undefined;
+    </script>
+</body>
+</html>

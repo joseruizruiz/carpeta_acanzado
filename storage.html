@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<script>
+		if(localStorage.getItem("pageSize")){
+			alert('ya existe');
+		} else {
+			localStorage.getItem("pageSize",10);
+
+		}
+
+		localStorage.setItem("obj",JSON.stringify({
+			val1: true
+		}));
+
+		var size= localStorage.getItem("pageSize");
+		console.log(typeof size);
+		var obj= localStorage.getItem("obj");
+		console.log(JSON.parse(obj));
+	</script>
+</body>
+</html>
